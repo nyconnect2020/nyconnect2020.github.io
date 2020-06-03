@@ -21,10 +21,11 @@
 title: NY Connect Capstone 2020
 email: el3220@nyu.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Main website to showcase the work and findings related to our Capstone Project 2020 at NYU.
+  Website to display our finding and work done for our Capstone at NYU 2020.
+  Thanks to NYC DoITT for its support.
 baseurl: "/capstone" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: TODO
+# twitter_username: jekyllrb
 github_username:  lobodemonte
 
 # Build settings
