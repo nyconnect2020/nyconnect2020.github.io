@@ -1,0 +1,10 @@
+header {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.carousel-caption {
+    position: absolute;
+    color: white;
+    text-align: right;
+    background-color: rgba(12,12,12,0.9);
+}
