@@ -5,8 +5,17 @@ header {
 .carousel-caption {
     /* transform: translateY(-50%);
     bottom: 0; */
-    bottom: 35%; 
+    bottom: 20%; 
     text-align: right;
     color: white;
     background-color: rgba(12,12,12,0.9);
+}
+
+.social-icons {
+    height: 2em;
+}
+
+.team-image {
+    height: 100%; 
+    width: auto;
 }
