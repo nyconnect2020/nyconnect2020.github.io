@@ -19,3 +19,14 @@ header {
     height: 100%; 
     width: auto;
 }
+
+.data-provider-img {
+    height: 10em;
+}
+
+#data img {
+    padding: .5em;
+    max-height: 10em;
+    width:auto;
+    height:auto;
+}
