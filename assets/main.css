@@ -5,12 +5,12 @@ header {
 /* unvisited link */
 a {
     color: black;
-  }
+}
   
   /* mouse over link */
-  a:hover {
+a:hover {
     color: blue;
-  }
+}
 
 .row {
     margin-left: .5em;
