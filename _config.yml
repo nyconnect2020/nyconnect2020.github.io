@@ -18,11 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: NY Connect Capstone 2020
+title: NY Connect
 email: el3220@nyu.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Website to display our finding and work done for our Capstone at NYU 2020.
-  Thanks to NYC DoITT for its support.
+  NYU CUSP Capstone 2020
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://lobodemonte.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
