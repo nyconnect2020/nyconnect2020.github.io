@@ -1,9 +1,18 @@
 <header class="sticky-top">
   <nav class="navbar navbar-default">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="https://cusp.nyu.edu/">
         <img class="nyu-logo" src="/assets/images/nyu_cusp_logo.png" width="auto" height="30" alt="" loading="lazy">
       </a>
       <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="/home/#overview">Overview</a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="/home/#data">Data</a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="/home/#results">Results</a>
+        </li>   
         {%- assign default_paths = site.pages | map: "path" -%}
 
         {%- assign page_paths = site.header_pages | default: default_paths -%}
