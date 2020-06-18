@@ -2,6 +2,11 @@ header {
     background-color: rgba(255, 255, 255, 0.75);
 }
 
+.row {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
 .carousel-caption {
     /* transform: translateY(-50%);
     bottom: 0; */
@@ -24,10 +29,10 @@ header {
     height: 10em;
 }
 
-#data img {
+.fixed-height-img {
     padding: .5em;
     max-height: 10em;
-    width:auto;
+    width:100%;
     height:auto;
 }
 
