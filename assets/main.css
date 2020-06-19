@@ -20,10 +20,11 @@ a:hover {
 .carousel-caption {
     /* transform: translateY(-50%);
     bottom: 0; */
-    bottom: 20%; 
+    bottom: 35%; 
     text-align: right;
     color: white;
-    background-color: rgba(12,12,12,0.9);
+    background-color: rgba(12,12,12,0.75);
+    padding: 1em;
 }
 
 .social-icons {
