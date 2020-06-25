@@ -39,7 +39,7 @@ a:hover {
 .carousel-caption {
     /* transform: translateY(-50%);
     bottom: 0; */
-    bottom: 35%; 
+    bottom: 25%; 
     text-align: right;
     color: white;
     background-color: rgba(12,12,12,0.75);
