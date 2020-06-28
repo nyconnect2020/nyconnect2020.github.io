@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-12">
+        <h2>Methodology</h2>
+    </div>
+    <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-spatial" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+                Spatial Autocorrelation
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-regression" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+                Regression
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-bayes" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+                Bayes Net
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-econ" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+                Supply/Demand
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-twitter" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+                Sentiment Analysis
+            </a>
+        </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-spatial">
+            To test for market spatial segmentation, local and global spatial autocorrelation were calculated. 
+            A queen contiguity-based spatial weights was obtained from the geospatial datasets. 
+            The degree to which contiguous spatial units reflected similar values, and whether said observed patterns were randomized outcomes were then calculated. 
+            This analysis was performed on the Internet Service Providers (ISPs), pricing, and broadband subscription datasets. 
+        </div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-regression">...
+
+        </div>
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-bayes">
+            A Bayesian Network was constructed using demographic data such as race, income, age, and broadband subscription rates,
+             plus the number of unique broadband ISPs at the Census block level. 
+            The network showed which of those factors had an impact on broadband subscription rates.
+        </div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-econ">...
+
+        </div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-twitter">
+            Text mining based on Twitter data was also performed to provide more insights into the public's perception of current telecom service. 
+            Twitter analysis includes tweet retrieval, text preprocessing, exploratory data analysis, sentiment analysis and word cloud visualization. Tweets mentioning a provider and services between 2010 and 2020 were scraped. 
+            A Word2vec-LSTM model evaluated each tweet’s sentiment on a scale of 0 (negative) to 1 (positive). 
+        </div>
+      </div>
+    </div>
+  </div>
