@@ -72,3 +72,7 @@ a:hover {
     margin-top: 1em;
     margin-bottom: 2em;
 }
+
+.result-content {
+    padding-top: .8em;
+}
