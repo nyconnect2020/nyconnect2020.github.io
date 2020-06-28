@@ -7,7 +7,7 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tableau" role="tab"
-                        aria-controls="home" aria-selected="true">Exploration</a>
+                        aria-controls="home" aria-selected="true">Data Exploration</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#r_spatial" role="tab"
@@ -32,26 +32,66 @@
             </ul>
             <div class="tab-content" id="resultContent">
                 <div class="tab-pane fade show active" id="tableau" role="tabpanel" aria-labelledby="Data Visualization">
-                    <h3>Visualizing Broadband Inequalities</h3>
+                    <div class="row justify-content-center result-content">
+                    <h3 class="col-md-12 text-justify">Visualizing Broadband Inequalities</h3>
+                    <p class="col-md-12 text-justify">
+                        Currently only two thirds of NYC households have access to a wired broadband connection. 
+                        We created this dashboard to appreciate in red the Census tracts with broadband internet adoption rates lower than 66% (i.e. two-thirds).
+                        <br><br> 
+                        Visually we can see that the Bronx as a whole struggles with low adoption rates,
+                         whereas the other boroughs have smaller more concentrated hotspots like in Williamsburg, the Lower East Side, and Borough Park. 
+                        Additionally, to add more color to this visualization we added information about income rates and the number of unique internet
+                         service providers (ISPs) found in eacn tract. 
+                        <br><br>
+                        As we can discover through the dashboard, areas with the most disparaties in broadband subscription (Wired Broadband < 0.66)
+                         come from areas with low income (00-50k > 0.50), while the number of ISPs don't seem to have much of an impact on
+                         broadband adoption rates.
+                    </p>
+                    </div>
                     <iframe
                         src="https://public.tableau.com/views/broadband_2018/BroadbandRatesIncome?:showVizHome=no&:embed=true"
                         width="100%" height="750em">
                     </iframe>
                 </div>
                 <div class="tab-pane fade" id="r_spatial" role="tabpanel" aria-labelledby="Spatial Autocorrelation Results">
-                    ...
+                    <div class="row justify-content-center result-content">
+                        <h3 class="col-md-12 text-justify">How broadband-access is a function of geography</h3>
+                        <p class="col-md-12 text-justify">
+                            TODO
+                        </p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="r_regression" role="tabpanel" aria-labelledby="Data Regression Results">
-                    ...
+                    <div class="row justify-content-center result-content">
+                        <h3 class="col-md-12 text-justify">How broadband access is a function of geography</h3>
+                        <p class="col-md-12 text-justify">
+                            TODO
+                        </p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="r_bayes_net" role="tabpanel" aria-labelledby="Bayes Network Results">
-                    ...
+                    <div class="row justify-content-center result-content">
+                        <h3 class="col-md-12 text-justify">Which factors influence broadband access</h3>
+                        <p class="col-md-12 text-justify">
+                            TODO
+                        </p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="r_curve" role="tabpanel" aria-labelledby="Supply/Demand Curve Results">
-                    ...
+                    <div class="row justify-content-center result-content">
+                        <h3 class="col-md-12 text-justify">What is the optimal number of ISPs?</h3>
+                        <p class="col-md-12 text-justify">
+                            TODO
+                        </p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="r_twitter" role="tabpanel" aria-labelledby="Twitter Sentiment Analysis Results">
-                    ...
+                    <div class="row justify-content-center result-content">
+                        <h3 class="col-md-12 text-justify">What do people think of their service?</h3>
+                        <p class="col-md-12 text-justify">
+                            TODO
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
