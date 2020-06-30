@@ -4,43 +4,74 @@
     </div>
     <div class="col-4">
         <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-spatial" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+            <a class="list-group-item list-group-item-action active" id="list-spatial" data-toggle="list" href="#spatial-desc" role="tab" aria-controls="spatial">
                 Spatial Autocorrelation
             </a>
-            <a class="list-group-item list-group-item-action" id="list-regression" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
-                Regression
+            <a class="list-group-item list-group-item-action" id="list-regression" data-toggle="list" href="#regression-desc" role="tab" aria-controls="regression">
+                Broadband Pricing Regression Analysis
             </a>
-            <a class="list-group-item list-group-item-action" id="list-bayes" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+            <a class="list-group-item list-group-item-action" id="list-market" data-toggle="list" href="#market-desc" role="tab" aria-controls="market">
+                Internet Market Analysis 
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-bayes" data-toggle="list" href="#bayes-desc" role="tab" aria-controls="bayes">
                 Bayes Net
             </a>
-            <a class="list-group-item list-group-item-action" id="list-econ" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+            <a class="list-group-item list-group-item-action" id="list-econ" data-toggle="list" href="#econ-desc" role="tab" aria-controls="econ">
                 Supply/Demand
             </a>
-            <a class="list-group-item list-group-item-action" id="list-twitter" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+            <a class="list-group-item list-group-item-action" id="list-twitter" data-toggle="list" href="#twitter-desc" role="tab" aria-controls="twitter">
                 Sentiment Analysis
             </a>
         </div>
     </div>
     <div class="col-8">
       <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-spatial">
+        <div class="tab-pane fade show active" id="spatial-desc" role="tabpanel" aria-labelledby="list-spatial">
             To test for market spatial segmentation, local and global spatial autocorrelation were calculated. 
             A queen contiguity-based spatial weights was obtained from the geospatial datasets. 
             The degree to which contiguous spatial units reflected similar values, and whether said observed patterns were randomized outcomes were then calculated. 
             This analysis was performed on the Internet Service Providers (ISPs), pricing, and broadband subscription datasets. 
         </div>
-        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-regression">...
-
+        <div class="tab-pane fade" id="regression-desc" role="tabpanel" aria-labelledby="list-regression">
+            <p>
+            To understand the demand and supply in the telecom industry of New York City, linear regression is utilized in a total of 2165 census
+             tracts to draw the supply and demand curves in both 2017 and 2019. Following the microeconomic theory, the broadband price in each tract
+             is the dependent variable and we are interested in understanding its influencing factors. 
+            <br><br> 
+            For the demand side, the number of ISPs and also demographics that may have an impact on people's willingness and ability to access the
+             internet are considered as independent variables. 
+            <br><br> 
+            For the supply side, the only independent variable is the number of broadband service
+             providers. 
+            <br><br>
+            All datasets are preprocessed and missing values are filled as zero. By plotting the prediction of price in each level of
+             providers' amount, we are able to get the demand and supply curves. Considering that many census tracts may have the same
+             number of providers but different demographic features, resulting to multiple prediction results for one certain number of
+             providers, the average price is calculated to represent all predictive values.
+             </p>
+             
         </div>
-        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-bayes">
+        <div class="tab-pane fade" id="market-desc" role="tabpanel" aria-labelledby="list-market">
+            <p>
+            We used the Herfindahl-Hirschman Index (HHI) to estimate the concentration level of the broadband market in New York City.
+            This measure is commonly used by the Department of Justice to determine firm-market concentration and competitiveness.
+            <br><br>
+            The HHI was calculated by taking the sum of the square of each internet firm’s market share. 
+            The measure takes into account the relative size distribution of each firm. 
+            The number will increase when more companies emerge in a market or the disparity in size between those firms decreases. 
+            However, this method fails to assess the complexities of various markets in a more accurate way.
+            </p>
+            <img src="/assets/images/results/hhi.png" alt="hhi-model"> 
+        </div>
+        <div class="tab-pane fade" id="bayes-desc" role="tabpanel" aria-labelledby="list-bayes">
             A Bayesian Network was constructed using demographic data such as race, income, age, and broadband subscription rates,
              plus the number of unique broadband ISPs at the Census block level. 
             The network showed which of those factors had an impact on broadband subscription rates.
         </div>
-        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-econ">...
+        <div class="tab-pane fade" id="econ-desc" role="tabpanel" aria-labelledby="list-econ">...
 
         </div>
-        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-twitter">
+        <div class="tab-pane fade" id="twitter-desc" role="tabpanel" aria-labelledby="list-twitter">
             Text mining based on Twitter data was also performed to provide more insights into the public's perception of current telecom service. 
             Twitter analysis includes tweet retrieval, text preprocessing, exploratory data analysis, sentiment analysis and word cloud visualization. Tweets mentioning a provider and services between 2010 and 2020 were scraped. 
             A Word2vec-LSTM model evaluated each tweet’s sentiment on a scale of 0 (negative) to 1 (positive). 
