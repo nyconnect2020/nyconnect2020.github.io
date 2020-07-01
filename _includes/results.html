@@ -15,7 +15,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#r_regression" role="tab"
-                        aria-controls="contact" aria-selected="false">Pricing Regression</a>
+                        aria-controls="contact" aria-selected="false">Pricing Regression Analysis</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#r_market" role="tab"
@@ -26,31 +26,26 @@
                         aria-controls="contact" aria-selected="false">Bayes Net</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#r_curve" role="tab"
-                        aria-controls="contact" aria-selected="false">Supply/Demand</a>
-                </li>
-                <li class="nav-item" role="presentation">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#r_twitter" role="tab"
-                        aria-controls="contact" aria-selected="false">Text Analysis</a>
+                        aria-controls="contact" aria-selected="false">Twitter Text Mining</a>
                 </li>
             </ul>
             <div class="tab-content" id="resultContent">
                 <div class="tab-pane fade show active" id="tableau" role="tabpanel" aria-labelledby="Data Visualization">
                     <div class="row justify-content-center result-content">
-                    <h3 class="col-md-12 text-justify">Visualizing Broadband Inequalities</h3>
-                    <p class="col-md-12 text-justify">
-                        Currently only two thirds of NYC households have access to a wired broadband connection. 
-                        We created this dashboard to appreciate in red the Census tracts with broadband internet adoption rates lower than 66% (i.e. two-thirds).
-                        <br><br> 
-                        Visually we can see that the Bronx as a whole struggles with low adoption rates,
-                         whereas the other boroughs have smaller more concentrated hotspots like in Williamsburg, the Lower East Side, and Borough Park. 
-                        Additionally, to add more color to this visualization we added information about income rates and the number of unique internet
-                         service providers (ISPs) found in eacn tract. 
-                        <br><br>
-                        As we can discover through the dashboard, areas with the most disparaties in broadband subscription (Wired Broadband < 0.66)
-                         come from areas with low income (00-50k > 0.50), while the number of ISPs don't seem to have much of an impact on
-                         broadband adoption rates.
-                    </p>
+                        <p class="col-md-12 text-justify">
+                            Currently only two thirds of NYC households have access to a wired broadband connection. 
+                            We created this dashboard to appreciate in red the Census tracts with broadband internet adoption rates lower than 66% (i.e. two-thirds).
+                            <br><br> 
+                            Visually we can see that the Bronx as a whole struggles with low adoption rates,
+                            whereas the other boroughs have smaller more concentrated hotspots like in Williamsburg, the Lower East Side, and Borough Park. 
+                            Additionally, to add more color to this visualization we added information about income rates and the number of unique internet
+                            service providers (ISPs) found in eacn tract. 
+                            <br><br>
+                            As we can discover through the dashboard, areas with the most disparaties in broadband subscription (Wired Broadband < 0.66)
+                            come from areas with low income (00-50k > 0.50), while the number of ISPs don't seem to have much of an impact on
+                            broadband adoption rates.
+                        </p>
                     </div>
                     <iframe
                         src="https://public.tableau.com/views/broadband_2018/BroadbandRatesIncome?:showVizHome=no&:embed=true"
@@ -59,7 +54,6 @@
                 </div>
                 <div class="tab-pane fade" id="r_spatial" role="tabpanel" aria-labelledby="Spatial Autocorrelation Results">
                     <div class="row justify-content-center result-content">
-                        <h3 class="col-md-12 text-justify">How broadband-access is a function of geography</h3>
                         <p class="col-md-12 text-justify">
                             TODO
                         </p>
@@ -67,24 +61,21 @@
                 </div>
                 <div class="tab-pane fade" id="r_regression" role="tabpanel" aria-labelledby="Broadband Pricing Regression Results">
                     <div class="row justify-content-center result-content">
-                        <h3 class="col-md-12 text-justify">How broadband access is a function of geography</h3>
                         <p class="col-md-12 text-justify">
-                            In both 2017 and 2019 results, a significant negative correlation was identified in the demand side while a
-                             significant positive correlation was identified in the supply side. The result accords with the microeconomic
-                             theory that the higher the price of broadband service, the fewer quantity people are willing to or able to
-                              afford while the more providers will be since the market is promising. 
-                            Besides, people in one certain tract that earn more income may be able to afford more expensive broadband services,
-                             which drags up the price. Race and borough are also found to have varying influence on the price. 
-                            Broadband service charges more in a community where two or more races live and in Staten Island. 
-                            Potential reasons may have a relationship with the shortage of broadband infrastructure in those areas.
-                            For the demand and supply analysis, the cross point of the demand curve and supply curve is considered as
-                             the market equilibrium. Given the latest datasets, the equilibrium indicates the optimal number of providers are near 5, which means it would be better for both customers to have choice and providers to gain more market share. The equilibrium price is approximately 70.9 per line per month. Compared with the market 2 years ago, the latest demand curve moves slightly upward, which may result from a potential budget increase in the broadband service. People are willing to pay more for internet access. The supply curve moves downward, which indicates new tech such as 5G may drag down the cost so competition between companies increases and price decreases.
+                            A significant negative correlation was identified in the demand side,
+                             while a significant positive correlation was identified in the supply side. 
+                            The result accords with the microeconomic theory that higher prices for a service leads to fewer people consuming this service.                            Besides, people in one certain tract that earn more income may be able to afford more expensive broadband services, which drags up the price. Race and borough are also found to have varying influence on the price. Broadband service charges more in a community where two or more races live and in Staten Island. Potential reasons may have a relationship with the shortage of broadband infrastructure in those areas.
                         </p>
+                        <p class="col-md-12 text-justify">    
+                            By combining the demand and supply curves we found the market equilibrium to be around 5 broadband providers,
+                             while the equilibrium price is approximately $70.9 per line per month. 
+                            The supply curve moves downward, which indicates new tech such as 5G may drag down the cost so competition between companies increases, and price decreases.
+                        </p>
+                        <img src="/assets/images/results/market.png" alt="HHI model"> 
                     </div>
                 </div>
                 <div class="tab-pane fade" id="r_market" role="tabpanel" aria-labelledby="Market Analysis Results">
                     <div class="row justify-content-center result-content">
-                        <h3 class="col-md-12 text-justify">How competitive is the telecom market in NYC?</h3>
                         <p class="col-md-12 text-justify">
                             In NYC, the Index score for the telecoms industry is 3096, above the 2500 threshold for an oligopolistic market,
                              following the guidance of the U.S. Department of Justice & FTC. 
@@ -100,20 +91,33 @@
                         </p>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="r_curve" role="tabpanel" aria-labelledby="Supply/Demand Curve Results">
-                    <div class="row justify-content-center result-content">
-                        <h3 class="col-md-12 text-justify">What is the optimal number of ISPs?</h3>
-                        <p class="col-md-12 text-justify">
-                            TODO
-                        </p>
-                    </div>
-                </div>
                 <div class="tab-pane fade" id="r_twitter" role="tabpanel" aria-labelledby="Twitter Sentiment Analysis Results">
                     <div class="row justify-content-center result-content">
-                        <h3 class="col-md-12 text-justify">What do people think of their service?</h3>
                         <p class="col-md-12 text-justify">
-                            TODO
+                            According to the pie chart below, more than half of all the collected tweets were complaints. 
+                            This indicates that in most cases users tweet about their ISP when there is a problem with their service. 
                         </p>
+                        <img src="/assets/images/results/tweet_results1.png" alt="tweet sentiment"> 
+                        <p class="col-md-12 text-justify">
+
+                            On a provider level across time, tweet sentiment grew positive between 2013 and 2018, and then decreased between 2018 and 2020. 
+                            However there were fewer tweets between 2015 and 2018 as compared to other years. 
+                            This could mean that between 2015 and 2018, consumers may have been more satisfied with their service, as they tweeted less about it. 
+                            
+                            Verizon, AT&T, T-Mobile, Sprint account form a vast majority of the tweets collected. 
+                            
+                            Among them, Verizon covers mobile service, cable and fiber while the other 
+                            three mainly focus on mobile broadband in NYC. Thus in most cases people tweet about their mobile provider and 
+                            mobile service. 
+
+                            Considering the tweets which display extremely negative sentiment shown in Table 3, 
+                            the word cloud (Figure 11) shows what words are commonly used in these tweets. As guessed above, 
+                            mobile service is most commonly mentioned in this kind of tweets. Other significant keywords (e.g. internet, data, wifi, cable, network, speed, 3g, signal, LTE, slow) show that most people complained about the performance aspect (connectivity, accessibility, speed). In an oligopoly market, monopoly companies do not have enough incentive to maintain high service quality. This result indicates that related government agencies and public policy should not only focus on the quantity of providers in NYC but also pay attention to the service quality of providers.                             
+                        </p>
+                        <img src="/assets/images/results/tweet_results2.png" alt="tweet sentiment by provider"> 
+                        <img src="/assets/images/results/tweet_results3.png" alt="tweet sentiment by provider and year"> 
+                        <img src="/assets/images/results/tweet_results4.png" alt="tweet wordcloud"> 
+
                     </div>
                 </div>
             </div>
