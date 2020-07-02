@@ -76,3 +76,8 @@ a:hover {
 .result-content {
     padding-top: .8em;
 }
+
+.list-group-item.active {
+    background-color: gray;
+    border-color: gray;
+}

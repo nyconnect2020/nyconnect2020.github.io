@@ -2,7 +2,7 @@
     <div class="col-12">
         <h2>Methodology</h2>
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <div class="list-group" id="list-tab" role="tablist">
             <a class="list-group-item list-group-item-action active" id="list-spatial" data-toggle="list" href="#spatial-desc" role="tab" aria-controls="spatial">
                 Spatial Autocorrelation
@@ -21,7 +21,7 @@
             </a>
         </div>
     </div>
-    <div class="col-8">
+    <div class="col-9">
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="spatial-desc" role="tabpanel" aria-labelledby="list-spatial">
             To test for market spatial segmentation, local and global spatial autocorrelation were calculated. 
@@ -31,7 +31,7 @@
         </div>
         <div class="tab-pane fade" id="regression-desc" role="tabpanel" aria-labelledby="list-regression">
             <p>
-                A linear regression is utilized to understand the demand and supply relationship in the NYC telecom industry.  
+                A linear regression was utilized to understand the demand and supply relationship in the NYC telecom industry.  
                 The model uses data from 2017-2019 of all 2165 NYC census tracts. 
                 The dependent variable we're predicting is the price of broadband service (P).
             </p>
@@ -65,7 +65,8 @@
             Text mining based on Twitter data was performed to provide more insights into the public's perception of current telecom service. 
             Tweet analysis includes: tweet retrieval, text preprocessing, exploratory data analysis, sentiment analysis and word cloud
              visualization. 
-            Tweets mentioning a provider and certain service keywords and posted between 2010 and 2020 were scraped using a Python package TWINT. 
+            <br>
+            Tweets posted between 2010 and 2020 that mentioned a provider and certain service keywords were scraped using a Python package TWINT. 
             A pre-trained Word2vec-LSTM model then evaluated each tweet’s sentiment on a scale of 0 (negative) to 1 (positive). 
         </div>
       </div>
