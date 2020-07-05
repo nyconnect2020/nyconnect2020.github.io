@@ -7,11 +7,14 @@
             <a class="list-group-item list-group-item-action active" id="list-spatial" data-toggle="list" href="#spatial-desc" role="tab" aria-controls="spatial">
                 Spatial Autocorrelation
             </a>
+            <a class="list-group-item list-group-item-action" id="list-spatial-reg" data-toggle="list" href="#spatialreg-desc" role="tab" aria-controls="spatial-regression">
+                Spatial Regression
+            </a>
             <a class="list-group-item list-group-item-action" id="list-regression" data-toggle="list" href="#regression-desc" role="tab" aria-controls="regression">
                 Pricing Regression Analysis
             </a>
             <a class="list-group-item list-group-item-action" id="list-market" data-toggle="list" href="#market-desc" role="tab" aria-controls="market">
-                Market Analysis 
+                Internet Market Analysis 
             </a>
             <a class="list-group-item list-group-item-action" id="list-bayes" data-toggle="list" href="#bayes-desc" role="tab" aria-controls="bayes">
                 Bayes Net
@@ -24,10 +27,19 @@
     <div class="col-9">
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="spatial-desc" role="tabpanel" aria-labelledby="list-spatial">
-            To test for market spatial segmentation, local and global spatial autocorrelation were calculated. 
-            A queen contiguity-based spatial weights was obtained from the geospatial datasets. 
-            The degree to which contiguous spatial units reflected similar values, and whether said observed patterns were randomized outcomes were then calculated. 
-            This analysis was performed on the Internet Service Providers (ISPs), pricing, and broadband subscription datasets. 
+            Spatial autocorrelation is the degree to which contiguous spatial units reflect similar values, and whether said observed patterns 
+            were randomized outcomes. 
+            It involves calculating the correlation between observed values of a variable of interest and the
+             spatial lag of that particular variable, multiplied and standardized by a weight assigned to its contiguous neighbors. 
+           <br><br>  
+           The spatial lag is obtained by averaging all values of contiguous locations. 
+           A positive r-squared value between the two indicates that the value of the variable in consideration is auto-correlated with
+            that of neighboring locations.
+        </div>
+        <div class="tab-pane fade show active" id="spatialreg-desc" role="tabpanel" aria-labelledby="list-spatial-reg">
+            Spatial regression analysis introduces a spatially-lagged term in a regression model that allows the coefficients to vary by borough,
+             while accounting for the cumulative effects of each census tract’s independent variables on the dependent variable,
+             the household broadband internet subscription rate. 
         </div>
         <div class="tab-pane fade" id="regression-desc" role="tabpanel" aria-labelledby="list-regression">
             <p>
@@ -57,9 +69,11 @@
             <img src="/assets/images/results/hhi.png" class="img-fluid fixed-height-img" alt="HHI model"> 
         </div>
         <div class="tab-pane fade" id="bayes-desc" role="tabpanel" aria-labelledby="list-bayes">
-            A Bayesian Network was constructed using demographic data such as race, income, age, and broadband subscription rates,
+            A Bayesian Network is a probabilistic graphical model that was used to show causation relationships of
+             the descriptive data of each Census tract.
+            <br><br>
+            The data used to construct the net included data such as race, income, age mix, and broadband subscription rates,
              plus the number of unique broadband ISPs at the Census block level. 
-            The network showed which of those factors had an impact on broadband subscription rates.
         </div>
         <div class="tab-pane fade" id="twitter-desc" role="tabpanel" aria-labelledby="list-twitter">
             Text mining based on Twitter data was performed to provide more insights into the public's perception of current telecom service. 

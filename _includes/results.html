@@ -14,6 +14,10 @@
                         aria-controls="profile" aria-selected="false">Spatial Autocorrelation</a>
                 </li>
                 <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#r_spatialreg" role="tab"
+                        aria-controls="profile" aria-selected="false">Spatial Regression</a>
+                </li>                
+                <li class="nav-item" role="presentation">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#r_regression" role="tab"
                         aria-controls="contact" aria-selected="false">Pricing Regression Analysis</a>
                 </li>
@@ -40,8 +44,8 @@
                                 <br><br> 
                                 Visually we can see that the Bronx as a whole struggles with low adoption rates,
                                 whereas the other boroughs have smaller more concentrated hotspots like in Williamsburg, the Lower East Side, and Borough Park. 
-                                Additionally, to add more color to this visualization we added information about income rates and the number of unique internet
-                                service providers (ISPs) found in eacn tract. 
+                                Additionally, to add more color to this visualization, it includes information about income rates and the number of unique internet
+                                service providers (ISPs) found in eacn Census tract. 
                                 <br><br>
                                 As we can discover through the dashboard, areas with the most disparaties in broadband subscription (Wired Broadband < 0.66)
                                 come from areas with low income (00-50k > 0.50), while the number of ISPs don't seem to have much of an impact on
@@ -55,29 +59,92 @@
                     </iframe> -->
                 </div>
                 <div class="tab-pane fade" id="r_spatial" role="tabpanel" aria-labelledby="Spatial Autocorrelation Results">
+                    <div class="row result-content">
+                        <div class="col-md-12">
+                            <p class="col-md-12 text-justify">
+                                At the scale of census tracts, internet service infrastructure displays strong signs of spatial autocorrelation. 
+                                There are clusters of spatially contiguous census tracts that share similar levels of infrastructural provision
+                                in terms of price and the number of ISPs that is beyond randomness.
+                            </p>                        
+                            <p class="col-md-12 text-justify">
+                                It is more likely than not that these spatial patterns seen in Figures 1 and 2 are not randomized outcomes.  
+                                <br>
+                                The broad swathes of contiguous census tracts that are similarly clustered together imply that there are network
+                                effects at a scale greater than census tracts. 
+                                <br><br>
+                                Here's a legend explaining the assigned values on our figures below:                               
+                                <ul>
+                                    <li>
+                                        Not Sig:
+                                        <ul><li>
+                                            Statistically insignificant traces of spatial autocorrelation among contiguous census tracts
+                                        </li></ul>
+                                    </li>
+                                    <li>
+                                        High-High:
+                                        <ul><li>
+                                            Census tract with above-average value bounded by tracts with equally above-average values
+                                        </li></ul>
+                                    </li>
+                                    <li>
+                                        Low-High:
+                                        <ul><li>
+                                            Census tract with below-average value bounded by tracts with above-average values 
+                                        </li></ul>
+                                    </li>
+                                    <li>
+                                        Low-Low:
+                                        <ul><li>
+                                            Census tract with below-average value bounded by tracts with equally below-average values
+                                        </li></ul>
+                                    </li>
+                                    <li>
+                                        High-Low:
+                                        <ul><li>
+                                            Census tract with above-average value bounded by tracts with below-average values
+                                        </li></ul>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="/assets/images/results/spatial_auto.png" class="img-fluid fixed-height-img" alt="Spatial Market Analysis"> 
+                        </div>
+                        <div class="col-md-6">
+                            <img src="/assets/images/results/spatial_auto2.png" class="img-fluid fixed-height-img" alt="Spatial Market Analysis"> 
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="r_spatialreg" role="tabpanel" aria-labelledby="Spatial Regression Results">
                     <div class="row justify-content-center result-content">
                         <p class="col-md-12 text-justify">
-                            TODO
+                            Much like the Pricing Regression results of the supply and demand of ISPs, the Spatial Regressions showed that
+                             income levels were significant variables in determining broadband subscription rartes. 
+                            <br><br>
+                            Census tracts with more wealthier residents are associated with higher subscription rates. 
+                            More interestingly, the number of ISPs was negatively correlated with subscription rates. 
+                            These findings might imply that in the long-run, an increase in the number of ISPs can result in market
+                             fragmentation that reduces subscription rates.
                         </p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="r_regression" role="tabpanel" aria-labelledby="Broadband Pricing Regression Results">
                     <div class="row justify-content-center result-content">
                         <p class="col-md-12 text-justify">
-                            Our regression identified a significant negative correlation in the demand side,
+                            The pricing regression identified a significant negative correlation in the demand side,
                              and a significant positive correlation in the supply side. 
                             These result agree with microeconomic theory that states that higher prices for a good leads to
-                             fewer people consuming the same good.
+                             fewer people consuming it.
                             <br><br>
                             Furthermore the results showed that race and borough were factors of significant influence on the price
                              of broadband internet. 
                             The results also pointed that broadband service cost more in communities with more people of two or more
                              races, or those located in Staten Island. 
-                            <br>
-                            Further information can be found in the report. 
                         </p>
                         <p class="col-md-12 text-justify">    
-                            Finally, by combining the demand and supply curves calculated using the regression results,
+                            By combining the demand and supply curves calculated using the regression results,
                              we found the market equilibrium to be around <b>5 broadband providers</b>,
                              while the equilibrium price is approximately <b>$70.9 per line per month</b>. 
                         </p>
