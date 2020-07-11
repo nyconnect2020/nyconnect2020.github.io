@@ -6,49 +6,46 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    {%- include header.html -%}
+  {%- include header.html -%}
 
-    {%- include carousel.html -%}
+  {%- include carousel.html -%}
 
-    {%- include problem.html -%}
+  {%- include problem.html -%}
 
-    <hr>
-    
-    {%- include data.html -%}
+  <hr>
 
-    <hr>
-    
-    {%- include methods.html -%}
+  {%- include data.html -%}
 
-    <hr>
+  <hr>
 
-    {%- include results.html -%}
-    
-    <hr>
+  {%- include methods.html -%}
 
-    <div id ="conclusions" class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <h2>Conclusions</h2>
-        </div>
-        <div class="col-12">
-          <p>TODO</p>
-        </div>
-      </div>
-    </div>
+  <hr>
 
-    {%- include footer.html -%}
+  {%- include results.html -%}
 
-  </body>
+  <hr>
 
-  <div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </div>
+  {%- include conclusion.html -%}
+
+  {%- include footer.html -%}
+
+</body>
+
+<div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</div>
 
 </html>

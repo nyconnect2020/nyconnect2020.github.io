@@ -1,9 +1,9 @@
 <div id="results" class="container-fluid">
     <div class="row">
-        <div class="col-12">
+        <div class="col-md-12">
             <h2>Results</h2>
         </div>
-        <div class="col-12">
+        <div class="col-md-12">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tableau" role="tab"
@@ -16,7 +16,7 @@
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#r_spatialreg" role="tab"
                         aria-controls="profile" aria-selected="false">Spatial Regression</a>
-                </li>                
+                </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#r_regression" role="tab"
                         aria-controls="contact" aria-selected="false">Pricing Regression Analysis</a>
@@ -35,21 +35,26 @@
                 </li>
             </ul>
             <div class="tab-content" id="resultContent">
-                <div class="tab-pane fade show active" id="tableau" role="tabpanel" aria-labelledby="Data Visualization">
+                <div class="tab-pane fade show active" id="tableau" role="tabpanel"
+                    aria-labelledby="Data Visualization">
                     <div class="row justify-content-center result-content">
                         <div class="col-md-12">
                             <p class="text-justify">
-                                Currently only two thirds of NYC households have access to a wired broadband connection. 
-                                We created this dashboard to appreciate in red the Census tracts with broadband internet adoption rates lower than 66% (i.e. two-thirds).
-                                <br><br> 
-                                Visually we can see that the Bronx as a whole struggles with low adoption rates,
-                                whereas the other boroughs have smaller more concentrated hotspots like in Williamsburg, the Lower East Side, and Borough Park. 
-                                Additionally, to add more color to this visualization, it includes information about income rates and the number of unique internet
-                                service providers (ISPs) found in eacn Census tract. 
+                                Currently only two thirds of NYC households have access to a wired broadband connection.
+                                We created this dashboard to appreciate in red the Census tracts with broadband internet
+                                adoption rates lower than 66% (i.e. two-thirds).
                                 <br><br>
-                                As we can discover through the dashboard, areas with the most disparaties in broadband subscription (Wired Broadband < 0.66)
-                                come from areas with low income (00-50k > 0.50), while the number of ISPs don't seem to have much of an impact on
-                                broadband adoption rates.
+                                Visually we can see that the Bronx as a whole struggles with low adoption rates,
+                                whereas the other boroughs have smaller more concentrated hotspots like in Williamsburg,
+                                the Lower East Side, and Borough Park.
+                                Additionally, to add more color to this visualization, it includes information about
+                                income rates and the number of unique internet
+                                service providers (ISPs) found in eacn Census tract.
+                                <br><br>
+                                As we can discover through the dashboard, areas with the most disparaties in broadband
+                                subscription (Wired Broadband < 0.66) come from areas with low income (00-50k> 0.50),
+                                    while the number of ISPs don't seem to have much of an impact on
+                                    broadband adoption rates.
                             </p>
                         </div>
                     </div>
@@ -58,97 +63,93 @@
                         width="100%" height="750em">
                     </iframe> -->
                 </div>
-                <div class="tab-pane fade" id="r_spatial" role="tabpanel" aria-labelledby="Spatial Autocorrelation Results">
+                <div class="tab-pane fade" id="r_spatial" role="tabpanel"
+                    aria-labelledby="Spatial Autocorrelation Results">
                     <div class="row result-content">
                         <div class="col-md-12">
                             <p class="col-md-12 text-justify">
-                                At the scale of census tracts, internet service infrastructure displays strong signs of spatial autocorrelation. 
-                                There are clusters of spatially contiguous census tracts that share similar levels of infrastructural provision
+                                At the scale of census tracts, internet service infrastructure displays strong signs of
+                                spatial autocorrelation.
+                                There are clusters of spatially contiguous census tracts that share similar levels of
+                                infrastructural provision
                                 in terms of price and the number of ISPs that is beyond randomness.
-                            </p>                        
+                            </p>
                             <p class="col-md-12 text-justify">
-                                It is more likely than not that these spatial patterns seen in Figures 1 and 2 are not randomized outcomes.  
+                                It is more likely than not that these spatial patterns seen in Figures 1 and 2 are not
+                                randomized outcomes.
                                 <br>
-                                The broad swathes of contiguous census tracts that are similarly clustered together imply that there are network
-                                effects at a scale greater than census tracts. 
+                                The broad swathes of contiguous census tracts that are similarly clustered together
+                                imply that there are network
+                                effects at a scale greater than census tracts.
                                 <br><br>
-                                Here's a legend explaining the assigned values on our figures below:                               
-                                <ul>
-                                    <li>
-                                        Not Sig:
-                                        <ul><li>
-                                            Statistically insignificant traces of spatial autocorrelation among contiguous census tracts
-                                        </li></ul>
-                                    </li>
-                                    <li>
-                                        High-High:
-                                        <ul><li>
-                                            Census tract with above-average value bounded by tracts with equally above-average values
-                                        </li></ul>
-                                    </li>
-                                    <li>
-                                        Low-High:
-                                        <ul><li>
-                                            Census tract with below-average value bounded by tracts with above-average values 
-                                        </li></ul>
-                                    </li>
-                                    <li>
-                                        Low-Low:
-                                        <ul><li>
-                                            Census tract with below-average value bounded by tracts with equally below-average values
-                                        </li></ul>
-                                    </li>
-                                    <li>
-                                        High-Low:
-                                        <ul><li>
-                                            Census tract with above-average value bounded by tracts with below-average values
-                                        </li></ul>
-                                    </li>
-                                </ul>
+                                Here's a legend explaining the assigned values on our figures below:
+                            <dl class="row">
+                                <dt class="col-sm-3">Not Sig</dt>
+                                <dd class="col-sm-9">Statistically insignificant traces of spatial autocorrelation</dd>
+                                <dt class="col-sm-3">High-High</dt>
+                                <dd class="col-sm-9">Census tract with above-average value bounded by tracts with
+                                    equally above-average values</dd>
+                                <dt class="col-sm-3">Low-High</dt>
+                                <dd class="col-sm-9">Census tract with below-average value bounded by tracts with
+                                    above-average values</dd>
+                                <dt class="col-sm-3">Low-Low</dt>
+                                <dd class="col-sm-9">Census tract with below-average value bounded by tracts with
+                                    equally below-average values</dd>
+                                <dt class="col-sm-3">High-Low</dt>
+                                <dd class="col-sm-9"> Census tract with above-average value bounded by tracts with
+                                    below-average values</dd>
+                            </dl>
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <img src="/assets/images/results/spatial_auto.png" class="img-fluid fixed-height-img" alt="Spatial Market Analysis"> 
+                            <img src="/assets/images/results/spatial_auto.png" class="img-fluid fixed-height-img"
+                                alt="Spatial Correlation for Broadband Prices">
                         </div>
                         <div class="col-md-6">
-                            <img src="/assets/images/results/spatial_auto2.png" class="img-fluid fixed-height-img" alt="Spatial Market Analysis"> 
+                            <img src="/assets/images/results/spatial_auto2.png" class="img-fluid fixed-height-img"
+                                alt="Spatial Correlation for Unique ISPs Found">
                         </div>
 
 
                     </div>
                 </div>
-                <div class="tab-pane fade" id="r_spatialreg" role="tabpanel" aria-labelledby="Spatial Regression Results">
+                <div class="tab-pane fade" id="r_spatialreg" role="tabpanel"
+                    aria-labelledby="Spatial Regression Results">
                     <div class="row justify-content-center result-content">
                         <p class="col-md-12 text-justify">
-                            Much like the Pricing Regression results of the supply and demand of ISPs, the Spatial Regressions showed that
-                             income levels were significant variables in determining broadband subscription rartes. 
+                            Much like the Pricing Regression results of the supply and demand of ISPs, the Spatial
+                            Regressions showed that
+                            income levels were significant variables in determining broadband subscription rartes.
                             <br><br>
-                            Census tracts with more wealthier residents are associated with higher subscription rates. 
-                            More interestingly, the number of ISPs was negatively correlated with subscription rates. 
-                            These findings might imply that in the long-run, an increase in the number of ISPs can result in market
-                             fragmentation that reduces subscription rates.
+                            Census tracts with more wealthier residents are associated with higher subscription rates.
+                            More interestingly, the number of ISPs was negatively correlated with subscription rates.
+                            These findings might imply that in the long-run, an increase in the number of ISPs can
+                            result in market
+                            fragmentation that reduces subscription rates.
                         </p>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="r_regression" role="tabpanel" aria-labelledby="Broadband Pricing Regression Results">
+                <div class="tab-pane fade" id="r_regression" role="tabpanel"
+                    aria-labelledby="Broadband Pricing Regression Results">
                     <div class="row justify-content-center result-content">
                         <p class="col-md-12 text-justify">
                             The pricing regression identified a significant negative correlation in the demand side,
-                             and a significant positive correlation in the supply side. 
-                            These result agree with microeconomic theory that states that higher prices for a good leads to
-                             fewer people consuming it.
+                            and a significant positive correlation in the supply side.
+                            These result agree with microeconomic theory that states that higher prices for a good leads
+                            to
+                            fewer people consuming it.
                             <br><br>
-                            Furthermore the results showed that race and borough were factors of significant influence on the price
-                             of broadband internet. 
-                            The results also pointed that broadband service cost more in communities with more people of two or more
-                             races, or those located in Staten Island. 
+                            Furthermore the results showed that race and borough were factors of significant influence
+                            on the price
+                            of broadband internet.
                         </p>
-                        <p class="col-md-12 text-justify">    
+                        <p class="col-md-12 text-justify">
                             By combining the demand and supply curves calculated using the regression results,
-                             we found the market equilibrium to be around <b>5 broadband providers</b>,
-                             while the equilibrium price is approximately <b>$70.9 per line per month</b>. 
+                            we found the market equilibrium to be around <b>5 broadband providers</b>,
+                            while the equilibrium price is around <b>$70 per month</b>.
                         </p>
-                        <img src="/assets/images/results/market.png" class="img-fluid fixed-height-img" style="height:35em" alt="HHI model"> 
+                        <img src="/assets/images/results/market.png" class="img-fluid fixed-height-img"
+                            style="height:35em" alt="NYC Internet Supply/Demand Model">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="r_market" role="tabpanel" aria-labelledby="Market Analysis Results">
@@ -156,58 +157,79 @@
                         <p class="col-md-12 text-justify">
                             In NYC the Herfindahl-Hirschman Index score for the telecoms industry is of 3,096.
                             <br>
-                            Following the guidance of the U.S. Department of Justice & Federal Trade Commission, 
-                            the NYC telecom market crosses the 2,500 threshold to classify it as an oligopolistic market.
+                            Following the guidance of the U.S. Department of Justice & Federal Trade Commission,
+                            the NYC telecom market crosses the 2,500 threshold to classify it as an oligopolistic
+                            market.
                             <br><br>
                             Therefore, the NYC telecom industry is considered an <b>oligopolistic market.</b>
                         </p>
-                        <img src="/assets/images/results/market_anal.png" class="img-fluid fixed-height-img" style="height:20em" alt="Market Analysis"> 
+                        <img src="/assets/images/results/market_anal.png" class="img-fluid fixed-height-img"
+                            style="height:20em" alt="Herfindahl-Hirschman Index Results">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="r_bayes_net" role="tabpanel" aria-labelledby="Bayes Network Results">
                     <div class="row justify-content-center result-content">
                         <p class="col-md-12 text-justify">
-                            The Bayes Net results are in line with our other analysis: that broadband internet subscription rates
-                             is a function of income. 
+                            The Bayes Net results are in line with our other analysis: that broadband internet
+                            subscription rates
+                            are a function of income.
                             <br>
-                            The network identified that neighborhoods with greater numbers of white residents tend to be richer and have
-                             more unique ISPs. Conversely, areas with less people making more than 150K tend to have more people making below 50K per year. 
-                            It is these poorer Census tracts that also have the lowest rates of Wired Broadband rates.   
+                            The network identified that neighborhoods with greater numbers of white residents tend to be
+                            richer and have
+                            more unique ISPs. Conversely, areas with less people making more than 150K tend to have more
+                            people making below 50K per year.
+                            It is these poorer Census tracts that also have the lowest rates of Wired Broadband rates.
                         </p>
-                        <img src="/assets/images/results/bayes_net.png" class="img-fluid fixed-height-img" alt="bayes net results"> 
+                        <img src="/assets/images/results/bayes_net.png" class="img-fluid fixed-height-img"
+                            alt="Bayes Network Internet Assess Results">
 
                     </div>
                 </div>
-                <div class="tab-pane fade" id="r_twitter" role="tabpanel" aria-labelledby="Twitter Sentiment Analysis Results">
+                <div class="tab-pane fade" id="r_twitter" role="tabpanel"
+                    aria-labelledby="Twitter Sentiment Analysis Results">
                     <div class="row justify-content-center result-content">
-                            <p class="col-md-12 text-justify">
-                                Sentiment analysis (as pictured below) determined that more than half of all the collected tweets were negative (e.g. complaints). 
-                                This indicates that in most cases users tweet about their ISP when there is a problem with their service. 
-                            </p>
-                            <img src="/assets/images/results/tweet_results1.png" class="img-fluid fixed-height-img" alt="tweet sentiment"> 
-                            <p class="col-md-12 text-justify">
-                                On a provider level across time, tweet sentiment grew positive (towards value of 1) between 2013 and 2018, and then decreased between 2018 and 2020. 
-                                This indicates that between 2015 and 2018, consumers may have been more satisfied with their service, as they tweeted less about it. 
-                            </p>
-                            <img src="/assets/images/results/tweet_results2.png" class="img-fluid fixed-height-img" alt="tweet sentiment by provider"> 
-                            <p class="col-md-12 text-justify">
-                                However there were fewer tweets between 2015 and 2018 as compared to other years. 
-                                Verizon, AT&T, T-Mobile, & Sprint accounted for a vast majority of the tweets collected. 
-                            </p>
-                            <img src="/assets/images/results/tweet_results3.png" class="img-fluid fixed-height-img" alt="tweet sentiment by provider and year"> 
-                            <p class="col-md-12 text-justify">
-                                Considering the tweets which display extremely negative sentiment, the word cloud below shows what words are
-                                 commonly used in these tweets. 
-                                <br>
-                                Mobile service is the most commonly mentioned kerword/phrase in negative tweets. 
-                                Some of the other significant keywords (e.g. internet, data, wifi, cable, network, speed, 3g, signal, LTE, slow) show that most people
-                                 complained about the performance aspect of their internet service (connectivity, accessibility, speed). 
-                                This could be a symptom of the oligopolistic market, where companies do not have enough incentive to maintain high internet service quality. 
-                                <br><br>
-                                These result suggests that government agencies and public policy should not only focus on the quantity of providers
-                                 in NYC but also on how to address service quality.                             
-                            </p>
-                            <img src="/assets/images/results/tweet_results4.png" class="img-fluid fixed-height-img"  style="height:25em" alt="tweet wordcloud"> 
+                        <p class="col-md-12 text-justify">
+                            Sentiment analysis (as pictured below) determined that more than half of all the collected
+                            tweets were negative (e.g. complaints).
+                            This indicates that in most cases users tweet about their ISP when there is a problem with
+                            their service.
+                        </p>
+                        <img src="/assets/images/results/tweet_results1.png" class="img-fluid fixed-height-img"
+                            alt="Text Sentiment Breakdown">
+                        <p class="col-md-12 text-justify">
+                            On a provider level across time, tweet sentiment grew positive (towards value of 1) between
+                            2013 and 2018, and then decreased between 2018 and 2020.
+                            This indicates that between 2015 and 2018, consumers may have been more satisfied with their
+                            service, as they tweeted less about it.
+                        </p>
+                        <img src="/assets/images/results/tweet_results2.png" class="img-fluid fixed-height-img"
+                            alt="Tweets Sourced By Provider">
+                        <p class="col-md-12 text-justify">
+                            However there were fewer tweets between 2015 and 2018 as compared to other years.
+                            Verizon, AT&T, T-Mobile, & Sprint accounted for a vast majority of the tweets collected.
+                        </p>
+                        <img src="/assets/images/results/tweet_results3.png" class="img-fluid fixed-height-img"
+                            alt="Tweets Sourced by Provider and Year">
+                        <p class="col-md-12 text-justify">
+                            Considering the tweets which display extremely negative sentiment, the word cloud below
+                            shows what words are
+                            commonly used in these tweets.
+                            <br><br>
+                            Mobile service is the most commonly mentioned kerword/phrase in negative tweets.
+                            Some of the other significant keywords (e.g. internet, data, wifi, cable, network, speed,
+                            3g, signal, LTE, slow) show that most people
+                            complained about the performance aspect of their internet service (connectivity,
+                            accessibility, speed).
+                            This could be a symptom of the oligopolistic market, where companies do not have enough
+                            incentive to maintain high internet service quality.
+                        </p>
+                        <img src="/assets/images/results/tweet_results4.png" class="img-fluid fixed-height-img"
+                            style="height:25em" alt="Tweet Wordcloud">
+                        <p class="col-md-12 text-justify">
+                            These result suggests that government agencies and public policy should not only focus on
+                            the quantity of providers
+                            in NYC but also on how to address service quality.
+                        </p>
                     </div>
                 </div>
             </div>

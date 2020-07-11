@@ -1,8 +1,8 @@
 <div class="row">
-    <div class="col-12">
+    <div class="col-md-12">
         <h2>Methodology</h2>
     </div>
-    <div class="col-3">
+    <div class="col-md-3">
         <div class="list-group" id="list-tab" role="tablist">
             <a class="list-group-item list-group-item-action active" id="list-spatial" data-toggle="list" href="#spatial-desc" role="tab" aria-controls="spatial">
                 Spatial Autocorrelation
@@ -24,22 +24,26 @@
             </a>
         </div>
     </div>
-    <div class="col-9">
+    <div class="col-md-9">
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="spatial-desc" role="tabpanel" aria-labelledby="list-spatial">
-            Spatial autocorrelation is the degree to which contiguous spatial units reflect similar values, and whether said observed patterns 
+            Spatial autocorrelation was used to test for spatial segmentation of the NYC telecom industry.
+            It measures the degree to which contiguous spatial units reflect similar values, and whether said observed patterns 
             were randomized outcomes. 
-            It involves calculating the correlation between observed values of a variable of interest and the
-             spatial lag of that particular variable, multiplied and standardized by a weight assigned to its contiguous neighbors. 
-           <br><br>  
-           The spatial lag is obtained by averaging all values of contiguous locations. 
-           A positive r-squared value between the two indicates that the value of the variable in consideration is auto-correlated with
+            <br><br>
+            The method calculates the correlation between observed values and the spatial lag of a particular variable
+            , multiplied and standardized by a weight assigned to its contiguous neighbors.  
+            The spatial lag is obtained by averaging all values of contiguous locations. 
+            <br><br>
+            A positive r-squared value between the two measures indicates that the value of the variable in consideration is auto-correlated with
             that of neighboring locations.
         </div>
         <div class="tab-pane fade show active" id="spatialreg-desc" role="tabpanel" aria-labelledby="list-spatial-reg">
-            Spatial regression analysis introduces a spatially-lagged term in a regression model that allows the coefficients to vary by borough,
+            A spatial regression introduces a spatially-lagged term in a regression model that allows coefficients to vary by borough,
              while accounting for the cumulative effects of each census tract’s independent variables on the dependent variable,
-             the household broadband internet subscription rate. 
+             the household broadband internet subscription rate.
+            <br><br>
+            The method helps us understand the relationship between demographic information and internet access while accounting for geographic location. 
         </div>
         <div class="tab-pane fade" id="regression-desc" role="tabpanel" aria-labelledby="list-regression">
             <p>
@@ -66,7 +70,7 @@
                 The number will increase when more companies emerge in a market or the disparity in size between those firms decreases. 
                 However, this method fails to assess the complexities of various markets in a more accurate way.
             </p>
-            <img src="/assets/images/results/hhi.png" class="img-fluid fixed-height-img" alt="HHI model"> 
+            <img src="/assets/images/results/hhi.png" class="img-fluid fixed-height-img" alt="Herfindahl-Hirschman Index Model"> 
         </div>
         <div class="tab-pane fade" id="bayes-desc" role="tabpanel" aria-labelledby="list-bayes">
             A Bayesian Network is a probabilistic graphical model that was used to show causation relationships between
@@ -76,7 +80,7 @@
              plus the number of unique broadband ISPs at the Census block level. 
         </div>
         <div class="tab-pane fade" id="twitter-desc" role="tabpanel" aria-labelledby="list-twitter">
-            Text mining based on Twitter data was performed to provide more insights into the public's perception of current telecom service. 
+            Text mining Twitter data was performed to provide more insights into the public's opinion on their internet service. 
             Tweet analysis includes: tweet retrieval, text preprocessing, exploratory data analysis, sentiment analysis and word cloud
              visualization. 
             <br>
